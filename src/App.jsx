@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import "./App.css";
-import Porfile from "./assets/Photo.png";
+import Porfile from "./assets/Photo.jpg";
 import Project1 from "./assets/project1.png";
 import Project2 from "./assets/project2.jpg";
 import Project3 from "./assets/project3.jpg";
@@ -119,7 +119,7 @@ function App() {
                             <div className="border border-gray-500 rounded-md p-5 flex-1">
                                 <img src={Project1} className="w-full h-auto" />
                                 <h3 className="text-2xl font-semibold mt-8">
-                                    Addis Ababa viral registration system
+                                    Addis Ababa vital registration system
                                 </h3>
                                 <p className="text-gray-400 text-sm mt-2">
                                     Responsive web based system for Addis Ababa viral registration system using PHP as backend
@@ -153,7 +153,7 @@ function App() {
                                         Live preview
                                     </button>
                                     <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                                        Checkout github
+                                        <a href='https://github.com/Abe-Tiz/Eyebank-managemt-system'>Checkout github</a>
                                     </button>
                                 </div>
                             </div>
@@ -174,7 +174,7 @@ function App() {
                                         Live preview
                                     </button>
                                     <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                                        Checkout github
+                                        <a href='https://github.com/todayAwoke/intermshiphasab'>Checkout github</a>
                                     </button>
                                 </div>
                             </div>
@@ -309,7 +309,7 @@ function App() {
                             <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                                 <h3 className="absolute left-0 text-lg font-semibold">2023/4</h3>
                                 <p>
-                                    within meantime I have token internship in different compaing and most of as software development.
+                                    within meantime I have token internship in different company and most of as software development.
                                 </p>
                             </div>
                             <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
@@ -360,7 +360,7 @@ function App() {
                                 </a>
                             </li>
                             <li>
-                                <a target="_blank" href="I'm on Instagram as @awoke.2121. Install the app to follow my photos and videos. https://www.instagram.com/awoke.2121?igsh=YzljYTk1ODg3Zg==">
+                                <a target="_blank" href="https://www.instagram.com/awoke.2121?igsh=YzljYTk1ODg3Zg==">
                                     <img src={Instagram} className="w-5" />
                                 </a>
                             </li>
@@ -368,7 +368,7 @@ function App() {
                         </ul>
                     </div>
                 </div>
-            </footer>
+            </footer >
             {
                 scrolling && (
                     <button className="fixed block right-8 bottom-0 w-24" onClick={() => {
