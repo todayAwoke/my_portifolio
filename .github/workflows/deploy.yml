@@ -22,8 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Ensure execute permissions for Vite
+        run: chmod +x ./node_modules/.bin/vite  # Set permissions for Vite
+
       - name: Build project
-        run: npm run build
+        run: npx vite build  # Use npx to run the local version of Vite
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
