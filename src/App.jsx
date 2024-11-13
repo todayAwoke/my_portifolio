@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import "./App.css";
+import "./components/Header.css"
 import Porfile from "./assets/Photo.jpg";
 import Project1 from "./assets/project1.png";
 import Project2 from "./assets/project2.jpg";
@@ -45,47 +46,56 @@ function App() {
         }
     }, [])
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
 
         <div className="max-w-4xl m-auto relative">
-            <header className={`${scrolling ? 'border-b border-gray-900' : ''}  fixed left-0 right-0 top-0 z-20`} id="home">
-                <div className="container m-auto px-4 py-6 max-w-4xl bg-black">
-                    <div className="flex flex-col gap-4 sm:flex-row justify-between items-center">
+            <header className={`fixed left-0 right-0 top-0 z-20 ${scrolling ? 'border-b border-gray-900' : ''} bg-black transition-all duration-300`}>
+                <div className="container mx-auto px-4 py-4">
+                    <div className="flex justify-between items-center">
                         <div>
-                            <h1 className="font-bold text-2xl"><a href="/"> Awoke Portfolio </a></h1>
+                            <h1 className="text-2xl font-bold text-white">
+                                <a href="/">My Portfolio</a>
+                            </h1>
                         </div>
-                        <div>
-                            <ul className="flex gap-4">
+                        <button
+                            className="sm:hidden text-white focus:outline-none"
+                            onClick={toggleMenu}
+                        >
+                            <svg className={`w-6 h-6 ${isMenuOpen ? 'hidden' : 'block'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                            <svg className={`w-6 h-6 ${isMenuOpen ? 'block' : 'hidden'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        <nav className={`absolute bg-black top-full left-0 right-0 w-full transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'} sm:static sm:block sm:bg-transparent`}>
+                            <ul className="flex flex-col sm:flex-row gap-4 p-4 sm:p-0 justify-center">
                                 <li>
-                                    <a href="/" className="text-gray-400 hover:text-white cursor-pointer">
-                                        Home
-                                    </a>
+                                    <a href="/" className="text-white hover:text-gray-300 transition duration-300">Home</a>
                                 </li>
                                 <li>
-                                    <a href="#projects" className="text-gray-400 hover:text-white cursor-pointer">
-                                        Projects
-                                    </a>
+                                    <a href="#projects" className="text-white hover:text-gray-300 transition duration-300">Projects</a>
                                 </li>
                                 <li>
-                                    <a href="#technologies" className="text-gray-400 hover:text-white cursor-pointer">
-                                        Technologies
-                                    </a>
+                                    <a href="#technologies" className="text-white hover:text-gray-300 transition duration-300">Technologies</a>
                                 </li>
                                 <li>
-                                    <a href="#aboutme" className="text-gray-400 hover:text-white cursor-pointer">
-                                        About me
-                                    </a>
+                                    <a href="#aboutme" className="text-white hover:text-gray-300 transition duration-300">About me</a>
                                 </li>
                                 <li>
-                                    <a href="#contact" className="text-gray-400 hover:text-white cursor-pointer">
-                                        Contact me
-                                    </a>
+                                    <a href="#contact" className="text-white hover:text-gray-300 transition duration-300">Contact me</a>
                                 </li>
                             </ul>
-                        </div>
+                        </nav>
                     </div>
                 </div>
-            </header >
+            </header>
             <main className="relative mt-28">
                 {/* Intro/Banner section */}
                 <section>
@@ -93,20 +103,20 @@ function App() {
                         <div>
                             <h2 className="font-bold text-4xl">Hello, I'm Awoke,</h2>
                             <div>
-                                <h2 className="font-bold text-4xl mt-1 gradiant-text">MERN Stack developer</h2>
+                                <h2 className="font-bold text-4xl mt-1 gradient-text">MERN Stack Developer</h2>
                             </div>
                             <div>
                                 <p className="mt-4 text-gray-400">
-                                    I am a Junior Full stack developer using latest technologies.In addition to this, I have basic knowledge of networking  and system design.currentlly I am developing Eye bank Management system of Ethiopian with my team worker.
+                                    I am a Junior Full Stack Developer using the latest technologies. In addition to this, I have basic knowledge of networking and system design. Currently, I am developing an Eye Bank Management System for Ethiopia with my team.
                                 </p>
-                                <button class="px-8 shadow-gray-500 shadow-md py-5 mt-5 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                                    <a href="../assets/my_cv.pdf" download>Download resume</a>
+                                <button className="px-8 shadow-gray-500 shadow-md py-5 mt-5 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+                                    <a href="../assets/my_cv.pdf" download>Download Resume</a>
                                 </button>
                             </div>
                         </div>
-                        <div className="relative">
-                            <div className="after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[420px] after:h-[320px] after:absolute after:top-0 after:-left-20 sm:after:-left-40 before:bg-[url('./small.png')] before:bg-contain before:block before:bg-no-repeat before:w-[220px] before:h-[220px] before:absolute before:bottom-0 before:-right-10">
-                                <img src={Porfile} className="relative z-10 w-[280px] m-auto sm:w-[600px]" />
+                        <div className="relative flex justify-center items-center after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[420px] after:h-[320px] after:absolute after:top-0 after:-left-20 sm:after:-left-40 before:bg-[url('./small.png')] before:bg-contain before:block before:bg-no-repeat before:w-[220px] before:h-[220px] before:absolute before:bottom-0 before:-right-10">
+                            <div className="relative w-[220px] h-[220px] rounded-full overflow-hidden">
+                                <img src={Porfile} alt="Profile" className="w-full h-full object-cover" />
                             </div>
                         </div>
                     </div>
