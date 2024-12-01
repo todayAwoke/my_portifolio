@@ -325,7 +325,19 @@ function App() {
                             <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                                 <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
                                 <p>
-                                    Know I am ready to develop some real project using MERK stack
+                                    I developed interactive website for Dream tutor and consultant service
+                                </p>
+                            </div>
+                            <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
+                                <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
+                                <p>
+                                    I  have been working 3 month project at Shayashone company and the project is for mister of education
+                                </p>
+                            </div>
+                            <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
+                                <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
+                                <p>
+                                    Know I am ready to develop real project using MERK,and other technologies stack
                                 </p>
                             </div>
 
