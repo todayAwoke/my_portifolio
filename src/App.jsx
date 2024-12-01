@@ -77,7 +77,7 @@ function App() {
                         <nav className={`absolute bg-black top-full left-0 right-0 w-full transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'} sm:static sm:block sm:bg-transparent`}>
                             <ul className="flex flex-col sm:flex-row gap-4 p-4 sm:p-0 justify-center">
                                 <li>
-                                    <a href="/" className="text-white hover:text-gray-300 transition duration-300">Home</a>
+                                    <a href="/my_portifolio" className="text-white hover:text-gray-300 transition duration-300">Home</a>
                                 </li>
                                 <li>
                                     <a href="#projects" className="text-white hover:text-gray-300 transition duration-300">Projects</a>
